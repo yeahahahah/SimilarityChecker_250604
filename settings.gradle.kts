@@ -1,0 +1,1 @@
+rootProject.name = "25604_StringCheck"
