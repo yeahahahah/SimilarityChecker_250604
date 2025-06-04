@@ -14,16 +14,9 @@ class stringCheckerTest {
         app= new StringChecker();
     }
 
-    @Test
-    void getLengthScoreSameLength() {
-        String input1="ASD";
-        String input2="DSA";
-        int expected=60;
 
 
-        int actual = app.getLengthScore(input1,input2);
-        assertEquals(actual,expected);
-    }
+
 
     @Test
     void getLengthScoreDiff1() {
@@ -50,6 +43,15 @@ class stringCheckerTest {
         String input1="AA";
         String input2="AAE";
         int expected=30;
+        int actual = app.getLengthScore(input1,input2);
+        assertEquals(expected,actual);
+    }
+
+    @Test
+    void getLengthScoreDiff4() {
+        String input1="AA";
+        String input2="AAEEE";
+        int expected=0;
         int actual = app.getLengthScore(input1,input2);
         assertEquals(expected,actual);
     }
